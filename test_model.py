@@ -104,7 +104,7 @@ num_pixels = x_train.shape[1] * x_train.shape[2]
 # create model
 model = Sequential()
 
-import architectures
+from architectures import architectures
 epoch = architectures.architecture1(model, input_shape, num_classes)
 
 model.compile(loss = 'categorical_crossentropy',
