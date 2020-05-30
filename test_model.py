@@ -64,7 +64,6 @@ from keras import backend as K
 
 # Training Parameters
 batch_size = 128
-epochs = 3
 
 # Lets store the number of rows and columns
 img_rows = x_train[0].shape[0]
@@ -104,8 +103,8 @@ num_pixels = x_train.shape[1] * x_train.shape[2]
 # create model
 model = Sequential()
 
-from architectures import architectures
-epoch = architectures.architecture1(model, input_shape, num_classes)
+import architectures
+epochs = architectures.architecture1(model, input_shape, num_classes)
 
 model.compile(loss = 'categorical_crossentropy',
               optimizer = keras.optimizers.Adadelta(),
